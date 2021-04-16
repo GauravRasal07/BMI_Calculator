@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Playfair+Display:ital,wght@0,800;1,800&display=swap');
+/* font-family: 'Crimson Text', serif;
+font-family: 'Playfair Display', serif; */
+
+/* Colors :
+#AFC2D5
+#C1D7CA
+#DFEFCA
+#FFF9A5
+#82584A */
+
+
+* {
+    margin: none;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-bottom: 60px;
+    background-color: #DFEFCA;
+    font-family: 'Playfair Display', serif;
+    color: #82584A;
+}
+
+nav {
+    margin-top: 30px;
+    background-color: #FFF570;
+}
+
+.block1 {
+    margin-top: 30px;
+}
+
+.jumbotron {
+    padding: 0;
+    padding-top: 30px;
+    background-color: #FFF9A5;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+
+.wrap{
+    color: #82584A;
+    width: 40%;
+    border-bottom: 1px solid rgba(130,88,74, 0.5);
+    font-weight: 900;
+    font-size: 36px;
+}
+
+section {
+    margin: 50px 0 50px 0;
+}
+
+hr {
+    border-top: 1px solid rgba(130,88,74, 0.5);
+    border-bottom: 1px solid rgba(256, 256, 256,0.2);
+    width: 80%;
+}
+
+.info {
+    padding-right: 30px;
+    border-right: 1px solid rgba(130,88,74, 0.5);;
+}
+
+.res {
+    padding-left: 30px;
+}
+
+.result {
+    padding: 5% 10% 10% 10%;
+    font-family: 'Crimson Text', serif;
+    font-weight: 900;
+    text-align: center;
+    font-size: 120px;
+    color: #007BFF;
+}
+
+.result p {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 36px;
+    color: #82584A;
+}
+
+input {
+    font-family: 'Crimson Text', serif;
+}
+
+.form-control {
+    font-weight: 900;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.form-control:focus {
+    border-color: #FFF9A5;
+}
+
+.image {
+    border-radius: 5px;
+    height: 100%;
+    width: 400px;
+}
+
+p {
+    font-style: italic;
+    letter-spacing: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #4785c2;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+table {
+    background-color: #FFF9A5;
+}
+
+th {
+    font-size: 22px;
+    color: #82584A;
+}
+
+td {
+    font-style: italic;
+}
+
+.num {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 450px) {
+    .jumbotron h1 {
+        margin-left: 15%;
+        width: 70%;
+    }
+
+    .info {
+        border-right: none;
+    }
+
+    .res {
+        padding-left: 15px;
+        margin-top: 20px;
+    }
+
+    .info, .res {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+
+    .image {
+        height: 300px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .jumbotron {
+        padding: 30px 0 0 0;
+    }
+}

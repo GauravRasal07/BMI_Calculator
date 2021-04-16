@@ -1,0 +1,153 @@
+<%- include("partials/header") %>
+
+<div class="jumbotron">
+    <div class="container">
+        <a href="" class="typewrite" data-period="2000" data-type='[ "Body Mass Index", "BMI Calculator." ]'>
+            <span class="wrap"></span>
+        </a>
+    </div>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <form class="form-inline">
+                <button id="metric" class="btn btn-outline-primary" type="button">Metric Units</button>
+                <button id="imperial" class="btn btn-sm btn-outline-secondary" type="button">Imperial Units</button>
+            </form>
+        </div>
+    </nav>
+</div>
+
+<div class="container" style="margin-bottom: 60px;">
+    <section>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 info">
+                <form action="/calculate-BMI" method="POST">
+                    <div class="form-group">
+                        <label for="inputAge">Age</label>
+                        <input type="number" class="form-control" id="inputAge" name="age" placeholder="Age(yrs)">
+                    </div>
+                    <div id="weight" class="form-group">
+                        <label for="inputWeight">Weight</label>
+                        <input type="number" class="form-control" id="inputWeight" name="kg" placeholder="Weight(in Kgs)">
+                    </div>
+                    <div id="height">
+                        <div class="form-group">
+                            <label for="inputHeight">Height</label>
+                            <input type="number" class="form-control" id="inputHeight" name="cm" placeholder="Height(in cms)">
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male">
+                        <label class="form-check-label" for="inlineRadio1">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline" style="margin-bottom: 12px;">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="female">
+                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn" style="background-color: #5F85AB; color: white; margin-top: 10px;">Calculate BMI</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-12 col-sm-6 res">
+                <h4><em>Result : </em></h4>
+                <div class="result">
+                    <strong>
+                        <% if(ans){ %>
+                            <span><%= ans %></span>
+                        <% } %>
+                    </strong><p><%= quote %></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div>
+            <h4>Body Mass Index</h4>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-8">
+                <p><em>
+                    Body mass index (BMI) is a value derived from the mass (weight) and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m2, resulting from mass in kilograms and height in metres.
+                    The BMI may be determined using a table or chart which displays BMI as a function of mass and height using contour lines or colours for different BMI categories, and which may use other units of measurement (converted to metric units for the calculation).
+                    The BMI is a convenient rule of thumb used to broadly categorize a person as underweight, normal weight, overweight, or obese based on tissue mass (muscle, fat, and bone) and height. Commonly accepted BMI ranges are underweight (under 18.5 kg/m2), normal weight (18.5 to 25), overweight (25 to 30), and obese (over 30).
+                    BMIs under 20 and over 25 have been associated with higher all-causes mortality, with the risk increasing with distance from the 20–25 range.
+                </em></p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <img src="./images/BMI2.png" class="image" alt="BMI image">
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div>
+            <h4>BMI Range Table :</h4>
+        </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Category</th>
+                <th scope="col">BMI</th>
+                <th scope="col">BMI(prime)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1.</th>
+                <td>Very severely underweight</td>
+                <td class="num">< 15</td>
+                <td class="num">< 0.60</td>
+              </tr>
+              <tr>
+                <th scope="row">2.</th>
+                <td>Severely underweight</td>
+                <td class="num">15 - 16</td>
+                <td class="num">0.60 - 0.64</td>
+              </tr>
+              <tr>
+                <th scope="row">3.</th>
+                <td>Underweight</td>
+                <td class="num">16 - 18.5</td>
+                <td class="num">0.64 - 0.74</td>
+              </tr>
+              <tr>
+                <th scope="row">4.</th>
+                <td>Normal (healthy weight)</td>
+                <td class="num">18.5 - 25</td>
+                <td class="num">0.74 - 1</td>
+              </tr>
+              <tr>
+                <th scope="row">5.</th>
+                <td>Overweight</td>
+                <td class="num">25 - 30</td>
+                <td class="num">1.0 - 1.2</td>
+              </tr>
+              <tr>
+                <th scope="row">6.</th>
+                <td>Obese Class I (Moderately obese)</td>
+                <td class="num">30 - 35</td>
+                <td class="num">1.2 - 1.4</td>
+              </tr>
+              <tr>
+                <th scope="row">7.</th>
+                <td>Obese Class II (Severely obese)</td>
+                <td class="num">35 - 40</td>
+                <td class="num">1.4 - 1.6</td>
+              </tr>
+              <tr>
+                <th scope="row">8.</th>
+                <td>Obese Class III (Very severely obese)</td>
+                <td class="num">40 < </td>
+                <td class="num">1.6 < </td>
+              </tr>
+            </tbody>
+          </table>
+    </section>
+    <hr>
+
+</div>
+
+<%- include("partials/footer") %>
+    

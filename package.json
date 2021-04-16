@@ -1,0 +1,27 @@
+{
+  "name": "bmi_calculator",
+  "version": "1.0.0",
+  "description": "BMI Calculator",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GauravRasal07/BMI_Calculator.git"
+  },
+  "author": "mr.gaurav rasal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GauravRasal07/BMI_Calculator/issues"
+  },
+  "homepage": "https://github.com/GauravRasal07/BMI_Calculator#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chart.js": "^3.1.0",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1"
+  }
+}
