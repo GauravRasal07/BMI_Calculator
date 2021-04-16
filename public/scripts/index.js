@@ -9,8 +9,8 @@ function changeToImperial(){
     imperial.classList.add('btn-outline-primary');
     metric.classList.add('btn-sm');
     metric.classList.add('btn-outline-secondary');
-    weight.innerHTML = '<label for="inputWeight">Weight</label><input type="number" class="form-control" id="inputWeight" name="pound" placeholder="Weight(in Pounds)">';
-    height.innerHTML = '<label for="inputHeight">Height</label><div class="form-row"><div class="form-group col-xs-6"><input type="number" class="form-control" id="inputHeight" name="feet" placeholder="feet"></div><div class="form-group col-xs-6 inch"><input type="number" class="form-control" name="inch" placeholder="inches"></div></div>'
+    weight.innerHTML = '<label for="inputWeight">Weight<span style="color: red;">*</span></label><input type="number" class="form-control" id="inputWeight" name="pound" placeholder="Weight(in Pounds)" required>';
+    height.innerHTML = '<label for="inputHeight">Height<span style="color: red;">*</span></label><div class="form-row"><div class="form-group col-xs-6"><input type="number" class="form-control" id="inputHeight" name="feet" placeholder="feet" required></div><div class="form-group col-xs-6 inch"><input type="number" class="form-control" name="inch" placeholder="inches" required></div></div>'
 }
 
 function changeToMetric(){
@@ -19,8 +19,8 @@ function changeToMetric(){
     metric.classList.add('btn-outline-primary');
     imperial.classList.add('btn-sm');
     imperial.classList.add('btn-outline-secondary');
-    weight.innerHTML = '<label for="inputWeight">Weight</label><input type="number" class="form-control" id="inputWeight" name="kg" placeholder="Weight(in Kgs)">'
-    height.innerHTML = '<div class="form-group"><label for="inputHeight">Height</label><input type="number" class="form-control" id="inputHeight" name="cm" placeholder="Height(in cms)"></div>'
+    weight.innerHTML = '<label for="inputWeight">Weight<span style="color: red;">*</span></label><input type="number" class="form-control" id="inputWeight" name="kg" placeholder="Weight(in Kgs)" required>'
+    height.innerHTML = '<div class="form-group"><label for="inputHeight">Height<span style="color: red;">*</span></label><input type="number" class="form-control" id="inputHeight" name="cm" placeholder="Height(in cms)" required></div>'
 }
 
 imperial.addEventListener('click', changeToImperial);

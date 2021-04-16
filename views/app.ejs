@@ -1,6 +1,6 @@
 <%- include("partials/header") %>
 
-<div class="jumbotron">
+<div id="header" class="jumbotron">
     <div class="container">
         <a href="" class="typewrite" data-period="2000" data-type='[ "Body Mass Index", "BMI Calculator." ]'>
             <span class="wrap"></span>
@@ -16,7 +16,7 @@
     </nav>
 </div>
 
-<div class="container" style="margin-bottom: 60px;">
+<div class="container">
     <section>
         <div class="row">
             <div class="col-xs-12 col-sm-6 info">
@@ -26,13 +26,13 @@
                         <input type="number" class="form-control" id="inputAge" name="age" placeholder="Age(yrs)">
                     </div>
                     <div id="weight" class="form-group">
-                        <label for="inputWeight">Weight</label>
-                        <input type="number" class="form-control" id="inputWeight" name="kg" placeholder="Weight(in Kgs)">
+                        <label for="inputWeight">Weight<span style="color: red;">*</span></label>
+                        <input type="number" class="form-control" id="inputWeight" name="kg" placeholder="Weight(in Kgs)" required>
                     </div>
                     <div id="height">
                         <div class="form-group">
-                            <label for="inputHeight">Height</label>
-                            <input type="number" class="form-control" id="inputHeight" name="cm" placeholder="Height(in cms)">
+                            <label for="inputHeight">Height<span style="color: red;">*</span></label>
+                            <input type="number" class="form-control" id="inputHeight" name="cm" placeholder="Height(in cms)" required>
                         </div>
                     </div>
                     <div class="form-check form-check-inline">
@@ -63,7 +63,7 @@
     <hr>
     <section>
         <div>
-            <h4>Body Mass Index</h4>
+            <h4>Body Mass Index   </h4>
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-8">
@@ -146,8 +146,29 @@
           </table>
     </section>
     <hr>
-
 </div>
+<section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <h4>What is BMI?</h4>
+                <p>Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women.</p>
+                <h4>Contact</h4>
+                <p>support@calculatebmi.com</p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <h4>Features</h4>
+                <p><a href="#header">BMI in Metric Units</a></p>
+                <p><a href="#header">BMI in Imperial Units</a></p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <h4>Connect</h4>
+                <p><a href="https://www.linkedin.com/in/gaurav-rasal-24820b191" target="_blank"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i> LinkedIn</a></p>
+                <p><a href="https://github.com/GauravRasal07" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <%- include("partials/footer") %>
     
